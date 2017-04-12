@@ -1,6 +1,12 @@
-10:36:00 **** Incremental Build of configuration Debug for project hello_world ****
+12:31:53 **** Auto Build of configuration Debug for project hello_world ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:9: error: 'brojac' undeclared (first use in this function)
+../src/helloworld.c:68:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Greška 1
 
-10:36:00 Build Finished (took 120ms)
+12:31:53 Build Finished (took 203ms)
 

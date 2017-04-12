@@ -44,6 +44,8 @@
 
 void print(char *str);
 
+int p;
+
 int main()
 {
     init_platform();
@@ -61,7 +63,24 @@ int main()
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+
+    while(1){
+    	if(brojac == 100){
+			for(p = 0; p < 1000; p++){
+
+					if(p % 5 == 0) {
+						draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + p);
+
+					}
+
+			//clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+			//set_cursor(350 + p);
+			//print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+		}
+    	}
+    }
+
+    //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + p);
     set_cursor(350);
     print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
 
